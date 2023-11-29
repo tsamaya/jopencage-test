@@ -1,4 +1,4 @@
-name: Unit Tests workflow
+name: Java Build workflow
 
 on:
   push:
