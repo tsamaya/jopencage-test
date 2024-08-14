@@ -1,6 +1,7 @@
 package net.tsamaya;
 
 import com.opencagedata.jopencage.JOpenCageGeocoder;
+import com.opencagedata.jopencage.JOpenCageException;
 import com.opencagedata.jopencage.model.JOpenCageForwardRequest;
 import com.opencagedata.jopencage.model.JOpenCageResponse;
 import com.opencagedata.jopencage.model.JOpenCageResult;
@@ -8,7 +9,7 @@ import com.opencagedata.jopencage.model.JOpenCageResult;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JOpenCageException {
         System.out.println("Hello world!");
 
         String apiKey = System.getenv("OPENCAGE_API_KEY");
@@ -24,8 +25,8 @@ public class Main {
         System.out.println("Version (spec): "+p.getSpecificationVersion());
         System.out.println("Vendor: "+p.getImplementationVendor());
 
-        jOpenCageGeocoder.setHost("localhost");
-        jOpenCageGeocoder.setHttpsEnabled(false);
+//        jOpenCageGeocoder.setHost("localhost");
+//        jOpenCageGeocoder.setHttpsEnabled(false);
 
 
         JOpenCageForwardRequest request = new JOpenCageForwardRequest("Lyon");
