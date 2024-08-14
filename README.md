@@ -3,7 +3,7 @@
 test jOpenCage lib.
 
 - run node server (use sudo to run on port 80)
-- gradle run
+- OPENCAGE_API_KEY=123 ./gradlew run
 
 outputs
 
