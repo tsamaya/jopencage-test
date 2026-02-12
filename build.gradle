@@ -9,7 +9,7 @@ version = '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
     maven {
-        url 'https://oss.sonatype.org/content/repositories/snapshots'
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
     }
 }
 
@@ -24,11 +24,10 @@ test {
     useJUnitPlatform()
 }
 
-apply plugin : "java" 
 ext {
    javaMainClass = "net.tsamaya.Main"
 }
 
 application {
-    mainClassName = javaMainClass
+    mainClass = javaMainClass
 }
